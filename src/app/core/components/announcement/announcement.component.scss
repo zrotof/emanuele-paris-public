@@ -1,0 +1,29 @@
+.announcement {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: black;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px;
+
+    .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .messages {
+        flex-grow: 1; 
+        text-align: center;
+    }
+
+    .right {
+        margin-left: auto; 
+    }
+}
+
+
+
+
+
+
