@@ -1,0 +1,13 @@
+<div class="trust-section">
+    <div class="content my-container">
+        <ul>
+            @for (trust of trustValues; track $index) {
+                <li>
+                    <fa-icon [icon]=" trust.icon| convertStringLabelToFontawesomeIcon"></fa-icon>
+                    <h3>{{trust.title}}</h3>
+                    <p>{{trust.description}}</p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

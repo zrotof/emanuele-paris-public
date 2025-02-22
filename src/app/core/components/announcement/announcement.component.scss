@@ -1,25 +1,75 @@
 .announcement {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    background-color: var(--projet-black-primary-color);
+    padding: 0.5rem 0;
     width: 100%;
-    background-color: black;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px;
 
-    .left {
+    .content{
         display: flex;
-        align-items: center;
-    }
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%;
 
-    .messages {
-        flex-grow: 1; 
-        text-align: center;
+        .navigation-buttons {
+            display: flex;
+            gap: 0.7rem;
+    
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 25px;
+                height: 25px;
+                background-color: transparent;
+                border: none;
+                color: var(--project-white-primary-color);
+                transition: all 0.2s ease-in-out;
+    
+                &:hover{
+                    border: 1px solid var(--project-white-primary-color);
+                }
+    
+                fa-icon{
+                    font-size: 1rem;
+                }
+            }
+        }
+    
+        .messages {
+            flex-grow: 1; 
+            text-align: center;
+            
+            p{
+                font-size: 0.92rem;
+                color: var(--project-white-primary-color);
+            }
+        }
+    
+        .close{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--project-white-primary-color);
+            color: var(--project-white-primary-color);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            background-color: transparent;
+    
+            &:hover{
+                background-color: var(--project-white-primary-color);
+                color: var(--projet-black-primary-color);
+            }
+    
+            fa-icon{
+                font-size: 1rem;
+            }
+        }
     }
-
-    .right {
-        margin-left: auto; 
-    }
+    
 }
 
 

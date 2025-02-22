@@ -1,0 +1,41 @@
+<div class="side-cart">
+ 
+    <button class="nav-cart" (click)="onDisplaySidebar()">
+        <fa-icon [icon]="'faCartPlus' | convertStringLabelToFontawesomeIcon"></fa-icon>
+        <span class="number">
+            {{numberOfItems}}
+        </span>
+    </button>
+
+    <p-drawer 
+        [closable]="false"
+        [(visible)]="isSiderbarDisplayed" 
+        position="right"
+        [blockScroll]="true"
+        styleClass="cart-content"
+        #drawerRef
+        >
+
+        <ng-template #headless>
+
+
+        <div class="top-header">
+            <span>Votre Panier</span>
+            <button (click)="closeCallback($event)">
+                <fa-icon [icon]=" 'faXmark' | convertStringLabelToFontawesomeIcon"></fa-icon>
+            </button>
+        </div>
+
+        @if (isCartEmpty) {
+            <div class="empty-cart">
+                <p>Votre panier est vide pour le moment...</p>
+                <button>VOIR NOS PRODUITS</button>
+            </div>
+        }
+        @else {
+
+        }
+        </ng-template>
+
+    </p-drawer>
+</div> 

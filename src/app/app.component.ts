@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AnnouncementComponent } from './core/components/announcement/announcement.component';
+import { HeaderComponent } from "./core/components/header/header.component";
+import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from "./core/components/footer/footer.component";
 @Component({
   selector: 'app-root',
-  imports: [FontAwesomeModule, AnnouncementComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent
+]
 })
 export class AppComponent {}

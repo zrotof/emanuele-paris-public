@@ -1,1 +1,28 @@
-<p>header works!</p>
+<header>
+  <app-announcement></app-announcement>
+
+  <div class="header" #navElement>
+    <div class="content header-container">
+      <span>Emanuel Paris</span>
+      <nav>
+        <ul class="menus">
+          <li><a>ROBES</a></li>
+          <li><a>KIMONO</a></li>
+          <li><a>JUPES</a></li>
+          <li><a>ACCESSOIRES</a></li>
+        </ul>
+
+        <ul class="icons">
+          <li>
+            <fa-icon
+              [icon]="'faUser' | convertStringLabelToFontawesomeIcon"
+            ></fa-icon>
+          </li>
+          <li>
+            <app-side-cart></app-side-cart>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

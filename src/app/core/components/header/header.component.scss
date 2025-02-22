@@ -1,0 +1,169 @@
+header{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9;
+    width: 100%;
+
+    app-announcement{
+        width: 100%;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+    
+            span{
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: var(--project-white-primary-color);
+            }
+    
+            nav{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex: 1;
+                gap: 8rem;
+    
+                .menus{
+                    display: flex;
+                    gap: 3rem;
+    
+                    li{
+                        a{
+                            position: relative;
+                            display: block;
+                            cursor: pointer;
+                            font-weight: 500;
+                            color: var(--project-white-primary-color);
+                            padding: 0.5rem 0;
+                            overflow: hidden;
+                            //text-shadow: 1px 1px 9px black;
+    
+                            &::before{
+                                position: absolute;
+                                content: "";
+                                transform: translateX(-100%);
+                                bottom: 0;
+                                height: 2px;
+                                width: 100%;
+                                background-color: var(--project-white-primary-color);
+                                border-radius: 10px;
+                                transition: all 0.3s ease-in-out;
+                            }
+    
+                            &:hover{
+    
+                                &::before{
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .icons{
+                    display: flex;
+                    gap: 1.5rem;
+        
+                    li{
+                        cursor: pointer;
+        
+                        fa-icon{
+                            color: var(--project-white-primary-color);
+                            font-size: 1.5rem;
+                        }
+
+                        app-side-cart{
+                            width: fit-content;
+
+                            .side-cart{
+                                .nav-cart{
+                                    position: relative;
+                                    background-color: transparent;
+                                    border: none;
+                                    
+                                    fa-icon{
+                                        color: var(--project-white-primary-color);
+                                        font-size: 1.5rem;
+                                    }
+
+                                    .number{
+                                        position: absolute;
+                                        top: -11px;
+                                        right: 7px;
+                                        background-color: red;
+                                        height: 23px;
+                                        width: 23px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 50%;
+                                        color: white;
+                                        font-size: 0.92em;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        background-color: var(--project-yellow-primary-color);
+        padding-top: 1.2rem ;
+        padding-bottom: 1.2rem ;
+    
+        .content {
+          height: fit-content !important;
+      
+          span{
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--project-black-primary-color) !important;
+          }
+      
+          nav{
+              ul{
+                li{
+                  a,
+                  fa-icon{
+                    color: var(--project-black-primary-color) !important;
+                  }
+
+                  a{
+                    font-weight: 600 !important;
+
+                    &::before{
+                        background-color: var(--projet-black-primary-color) !important;
+                    }
+                  }
+                }
+              }
+          }
+        }
+      }
+}

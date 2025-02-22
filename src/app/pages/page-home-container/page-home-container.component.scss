@@ -1,0 +1,10 @@
+.page-home-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    app-hero-banner,
+    app-trust-section{
+        width: 100%;
+    }
+}

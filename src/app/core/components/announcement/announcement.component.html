@@ -1,28 +1,27 @@
 <div class="announcement">
-  <div class="left">
-    <div class="message-navigation">
-      <button class="btn-prev-message">
+  <div class="content header-container">
+    <div class="navigation-buttons">
+      <button class="prev">
         <fa-icon
           [icon]="'faAngleLeft' | convertStringLabelToFontawesomeIcon"
         ></fa-icon>
       </button>
-      <button class="btn-next-message">
+      <button class="next">
         <fa-icon
           [icon]="'faAngleRight' | convertStringLabelToFontawesomeIcon"
         ></fa-icon>
       </button>
     </div>
-  </div>
-
-  <div class="messages">
-    <p>message bonjour c'est le premier essaie ici donc ca sera cool</p>
-  </div>
-
-  <div class="right">
-    <button>
+  
+    <div class="messages">
+      <p>message bonjour c'est le premier essaie ici donc ca sera cool</p>
+    </div>
+  
+    <button class="close">
       <fa-icon
         [icon]="'faXmark' | convertStringLabelToFontawesomeIcon"
       ></fa-icon>
     </button>
   </div>
+
 </div>
